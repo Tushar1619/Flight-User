@@ -16,10 +16,10 @@ function Passengers(props) {
           <PassengerInput />
           <div className="div" style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '35px' }}>
             <Link to="/select-flight" className="ui button">
-              Quay lại
+              Come back
             </Link>
             <Link to="/select-service" className="ui button primary">
-              Tiếp tục
+              Continue
             </Link>
           </div>
         </div>
@@ -37,8 +37,8 @@ function Passengers(props) {
     <div className="passengerBackground">
       <div className="ui container wrapper">
         <div className="search__info">
-          {props.type === 'oneway' && <h3>CHUYẾN BAY One-way | 1 Người lớn</h3>}
-          {props.type === 'roundtrip' && <h3>CHUYẾN BAY Round-trip | 1 Người lớn</h3>}
+          {props.type === 'oneway' && <h3>FLIGHT One-way |1 Adult</h3>}
+          {props.type === 'roundtrip' && <h3>FLIGHT Round-trip |1 Adult</h3>}
           <div className="desciption">
             <p style={{ marginRight: 20 }}>
               <i style={{ marginRight: 10 }} className="fas fa-map-marker-alt"></i>
