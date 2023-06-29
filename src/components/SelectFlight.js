@@ -43,12 +43,12 @@ function SelectFlight(props) {
             <Suspense fallback={ThreeDots}>
               {props.flights.length === 0 ? <div>There are no FLIGHTs  on the days selected</div> :
                 <>
-                  <h3 className="ui header customHeader">FLIGHT đi: {departureDay}</h3>
+                  <h3 className="ui header customHeader">FLIGHT Go: {departureDay}</h3>
                   <ListFlight type="oneway" flights={props.flights} />
                   {
                     props.type === 'roundtrip' &&
                     <>
-                      <h3 className="ui header customHeader">FLIGHT về: {returnDay}</h3>
+                      <h3 className="ui header customHeader">FLIGHT about: {returnDay}</h3>
                       <ListFlight type="roundtrip" flights={props.returnFlights} />
                     </>
                   }
