@@ -49,7 +49,7 @@ const renderTextField = ({ input, placeholder, label, meta }) => {
 function BillingInfo(props) {
 
   const onSubmit = (formValues) => {
-    // Đặt vé
+    // Book tickets
     const { type } = props;
     if(type === 'oneway') {
       const { passenger } = props;
@@ -129,14 +129,14 @@ function BillingInfo(props) {
       <div className="ui container grid" style={{ marginTop: 20 }}>
         <div className="eleven wide column">
           <Form onSubmit={props.handleSubmit(onSubmit)}>
-            <h4 className="ui dividing header">Thông tin thanh toán</h4>
+            <h4 className="ui dividing header">Billing Information</h4>
             <div className="field">
-              <label>Loại thẻ</label>
+              <label>card type</label>
               <Field name="cardType" component={renderSelectField} />
             </div>
             <div className="fields">
               <div className="seven wide field">
-                <label>Số thẻ</label>
+                <label>Card number</label>
                 <input type="text" name="card[number]" maxlength="16" placeholder="Card #" />
               </div>
               <div className="three wide field">
@@ -144,7 +144,7 @@ function BillingInfo(props) {
                 <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC" />
               </div>
               <div className="six wide field">
-                <label>Hạn thẻ</label>
+                <label>Card Expiry</label>
                 <div className="two fields">
                   <div className="field">
                     <select className="ui fluid search dropdown" name="card[expire-month]">
@@ -174,7 +174,7 @@ function BillingInfo(props) {
                 Come back
               </Link>
               <button type="submit" className="ui button primary">
-                Đặt vé
+                Book tickets
               </button>
             </div>
           </Form>

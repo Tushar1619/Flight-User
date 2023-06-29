@@ -41,7 +41,7 @@ function SelectFlight(props) {
         <div className="ui container grid" style={{ marginTop: 20 }}>
           <div className="eleven wide column">
             <Suspense fallback={ThreeDots}>
-              {props.flights.length === 0 ? <div>Không có FLIGHT nào.</div> :
+              {props.flights.length === 0 ? <div>There are no FLIGHTs  on the days selected</div> :
                 <>
                   <h3 className="ui header customHeader">FLIGHT đi: {departureDay}</h3>
                   <ListFlight type="oneway" flights={props.flights} />

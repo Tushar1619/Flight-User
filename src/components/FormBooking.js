@@ -154,12 +154,12 @@ const validate = (formValues) => {
 
   requiredFields.forEach(field => {
     if(!formValues[field]) {
-      errors[field] = 'Không bỏ trống';
+      errors[field] = 'Do not leave blank';
     }
   })
   
   if(formValues['startFrom'] === formValues['destination']) {
-    errors['destination'] = 'Destination không được trùng Departure';
+    errors['destination'] = 'Destination cannot match Departure';
   }
   if(formValues['departureDay'] && formValues['returnDay']) {
     const departureDay = new Date(formValues['departureDay']);

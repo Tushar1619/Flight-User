@@ -9,21 +9,21 @@ function BookingSuccess(props) {
     <div className="bookingSuccess">
       <div className="ui card ticket">
         <div className="content">
-          <div className="header header--green">Đặt vé thành công!</div>
+          <div className="header header--green">Book tickets successfully!</div>
         </div>
         <div className="content">
           <div className="ui small feed ticket-info">
             <div className="event">
               <div className="content">
                 <div className="summary center">
-                  <span>Mã đặt chỗ: {ticket.pnr}</span>
+                  <span>Reservation Code: {ticket.pnr}</span>
                 </div>
               </div>
             </div>
             <div className="event">
               <div className="content">
                 <div className="summary center">
-                  <span>Hành khách: {ticket.buyerName}</span>
+                  <span>Passenger: {ticket.buyerName}</span>
                   <hr />
                 </div>
               </div>
@@ -35,7 +35,7 @@ function BookingSuccess(props) {
                   <i style={{ marginLeft: 20, marginRight: 20 }} class="fas fa-plane"></i>
                   {flight.destination.name}
                   {props.selectedSeat && props.selectedSeat[0] &&
-                    <p>Khoang: {props.flight.type}  Ghế: {props.selectedSeat[0].id}</p>
+                    <p>Class: {props.flight.type}  Chair: {props.selectedSeat[0].id}</p>
                   }
                   <div>
                     <span>Departure at: {flight.takeOffTime}</span>
@@ -49,7 +49,7 @@ function BookingSuccess(props) {
                             <i style={{ marginLeft: 20, marginRight: 20 }} class="fas fa-plane"></i>
                             {returnFlight.destination.name}
                             {props.selectedReturnSeat && props.selectedReturnSeat[0] &&
-                              <p>Khoang: {props.returnFlight.type}  Ghế: {props.selectedReturnSeat[0].id}</p>
+                              <p>Class: {props.returnFlight.type}  Chair: {props.selectedReturnSeat[0].id}</p>
                             }
                             <div>
                               <span>Departure at: {returnFlight.takeOffTime}</span>
@@ -61,7 +61,7 @@ function BookingSuccess(props) {
                       </div>
                     }
                     <div className="ui content">
-                      Tổng Fare: <span className="ui header red">{ticket.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+                      Total Fare: <span className="ui header red">{ticket.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
                     </div>
                   </div>
                 </div>
