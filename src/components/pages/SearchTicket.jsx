@@ -47,7 +47,7 @@ function SearchTicket(props) {
       <div className="searchTicketContainer">
         <div className="searchTicketCard">
           <div className="formLeft">
-            <h2 className="searchTicketHeading">CHUYẾN BAY CỦA TÔI</h2>
+            <h2 className="searchTicketHeading">My flight</h2>
             <p>Bạn muốn xem chuyến bay đã đặt vui lòng điền thông tin bên dưới:
             </p>
             <form onSubmit={props.handleSubmit(onSubmit)} style={{ marginTop: '30px', textAlign: 'center' }}>
@@ -71,7 +71,7 @@ function SearchTicket(props) {
                     <div className="event">
                       <div className="content">
                         <div className="summary">
-                          <span>Loại vé: {booking.tickets.length === 2 ? 'Khứ hồi' : 'Một chiều'}</span>
+                          <span>Loại vé: {booking.tickets.length === 2 ? 'Round-trip' : 'One-way'}</span>
                         </div>
                       </div>
                     </div>

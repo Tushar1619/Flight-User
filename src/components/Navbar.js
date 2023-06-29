@@ -46,12 +46,12 @@ function NavBar() {
           <ul className={click ? 'nav-menu active': 'nav-menu'}>
             <li className="nav-item">
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-                Trang chủ
+                Home page
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/search-booking" className="nav-links" onClick={closeMobileMenu}>
-                Chuyến bay của tôi
+                My flight
               </Link>
             </li>
           </ul>

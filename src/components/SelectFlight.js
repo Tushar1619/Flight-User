@@ -79,16 +79,16 @@ function SelectFlight(props) {
     <div className="backgroundCustom">
       <div className="ui container wrapper">
         <div className="search__info">
-          {props.type === 'oneway' && <h3>CHUYẾN BAY MỘT CHIỀU | 1 Người lớn</h3>}
-          {props.type === 'roundtrip' && <h3>CHUYẾN BAY KHỨ HỒI | 1 Người lớn</h3>}
+          {props.type === 'oneway' && <h3>CHUYẾN BAY One-way | 1 Người lớn</h3>}
+          {props.type === 'roundtrip' && <h3>CHUYẾN BAY Round-trip | 1 Người lớn</h3>}
           <div className="desciption">
             <p style={{ marginRight: 20 }}>
               <i style={{ marginRight: 10 }} className="fas fa-map-marker-alt"></i>
-              Điểm Khởi hành: <span>{props.startFrom.name}</span>
+              Departure: <span>{props.startFrom.name}</span>
             </p>
             <p>
               <i style={{ marginRight: 10 }} className="fas fa-map-marker-alt"></i>
-              Điểm đến: <span>{props.destination.name}</span>
+              Destination: <span>{props.destination.name}</span>
             </p>
           </div>
         </div>

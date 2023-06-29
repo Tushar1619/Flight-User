@@ -81,8 +81,8 @@ function ListFlight(props) {
       <table className="ui celled table">
         <thead>
           <tr>
-            <th>Điểm khởi hành</th>
-            <th>Điểm đến</th>
+            <th>Departure</th>
+            <th>Destination</th>
             <th>Eco</th>
             <th>Deluxe</th>
             <th>SkyBoss</th>
