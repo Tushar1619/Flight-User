@@ -73,7 +73,7 @@ const renderDatePicker = ({ input, label, meta }) => {
       <DatePicker 
         selected={input.value} 
         onChange={input.onChange}
-        placeholderText="Ngày sinh" />
+        placeholderText="Date of birth" />
     </Form.Field>
   )
 }
@@ -83,26 +83,26 @@ function PassengerInput() {
   return (
     <Form>
       <h4 class="ui dividing header">PASSENGER INFORMATION ONLY</h4>
-      <label>Họ và tên</label>
+      <label>First and last name</label>
       <Form.Group widths="equal">
-        <Field name="firstName" placeholder="Họ" component={renderTextField} />
-        <Field name="lastName" placeholder="Tên đệm & tên" component={renderTextField} />
+        <Field name="firstName" placeholder="first name" component={renderTextField} />
+        <Field name="lastName" placeholder="last name" component={renderTextField} />
       </Form.Group>
       <Form.Group widths="equal">
-        <Field name="birthDay" label="Ngày sinh" placeholder="Ngày sinh" component={renderDatePicker} />
-        <Field name="country" label="Quốc gia" placeholder="Chọn quốc gia" component={renderSelectField} />
+        <Field name="birthDay" label="Date of birth" placeholder="Date of birth" component={renderDatePicker} />
+        <Field name="country" label="Nation" placeholder="Select Nation" component={renderSelectField} />
       </Form.Group>
       <Form.Group widths="equal">
-        <Field name="address" label="Địa chỉ" placeholder="Địa chỉ" component={renderTextField} />
+        <Field name="address" label="Address" placeholder="Address" component={renderTextField} />
       </Form.Group>
       <Form.Group widths="equal">
-        <Field name="email" label="Email" placeholder="Địa chỉ emal" component={renderTextField} />
+        <Field name="email" label="Email" placeholder="enter email address" component={renderTextField} />
       </Form.Group>
       <Form.Group widths="equal">
         <Field name="passengerId" label="CMND" placeholder="CMND" component={renderTextField} />
       </Form.Group>
       <Form.Group widths="equal">
-        <Field name="phone" label="Số điện thoại" placeholder="Số điện thoại" component={renderTextField} />
+        <Field name="phone" label="Phone number" placeholder="Phone number" component={renderTextField} />
       </Form.Group>
       
     </Form>
@@ -123,7 +123,7 @@ const validate = (formValues) => {
   ];
   requiredField.forEach(field => {
     if(!formValues[field]) {
-      errors[field] = 'Không bỏ trống.'
+      errors[field] = 'Do not leave blank.'
     }
   })
   return errors;

@@ -14,10 +14,10 @@ function BookingInFor(props) {
         <div>Landing at: {props.selectedFlight.landingTime}</div>
         <div>Ticket Type: {props.selectedFlight.type}</div>
         <div className="ui content">
-          Fare: <span className="ui header red">{parseInt(props.selectedFlight.price.value).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+          Fare: <span className="ui header red">{parseInt(props.selectedFlight.price.value).toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
         </div>
         <div className="ui content">
-          Tax: <span className="ui header red">{parseInt(props.selectedFlight.price.tax).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+          Tax: <span className="ui header red">{parseInt(props.selectedFlight.price.tax).toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
         </div>
       </div>
     )
@@ -32,10 +32,10 @@ function BookingInFor(props) {
         <div>Landing at: {props.selectedReturnFlight.landingTime}</div>
         <div>Ticket Type: {props.selectedReturnFlight.type}</div>
         <div className="ui content">
-          Fare: <span className="ui header red">{parseInt(props.selectedReturnFlight.price.value).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+          Fare: <span className="ui header red">{parseInt(props.selectedReturnFlight.price.value).toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
         </div>
         <div className="ui content">
-          Tax: <span className="ui header red">{parseInt(props.selectedReturnFlight.price.tax).toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+          Tax: <span className="ui header red">{parseInt(props.selectedReturnFlight.price.tax).toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
         </div>
       </div>
     )
@@ -59,7 +59,7 @@ function BookingInFor(props) {
           <div class="event">
             <div class="content">
               <div class="summary">
-                {props.passenger.firstName && <span>Họ và tên: {props.passenger.firstName}</span>}
+                {props.passenger.firstName && <span>First and last name: {props.passenger.firstName}</span>}
                 {props.passenger.lastName && <span>{' ' + props.passenger.lastName}</span>}
                 {props.passenger.passengerId && <p>CMND: {props.passenger.passengerId}</p>}
               </div>
@@ -101,7 +101,7 @@ function BookingInFor(props) {
       }
       <div class="extra content">
         <div class="header">
-          Total amount:  <span className="ui header red">{totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+          Total amount:  <span className="ui header red">{totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'INR' })}</span>
         </div>
       </div>
     </div>

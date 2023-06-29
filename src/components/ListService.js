@@ -63,7 +63,7 @@ function ListService(props) {
   )
 
   const LuggageContent = (
-    <p>Hãy chọn gói hành lý </p>
+    <p>Please select your luggage package </p>
   )
 
   const SeatMapAction = () => {
@@ -89,8 +89,8 @@ function ListService(props) {
     <div>
       <CardItem
         src={SeatImage}
-        heading="Chọn chỗ ngồi yêu thích"
-        description="Hãy chọn chỗ ngồi yêu thích của bạn"
+        heading="Choose your favorite seat"
+        description="Choose your favorite seat"
         content={SeatsMapcontent}
         actions={SeatMapAction}
         showModal={showSeatModal}
@@ -98,8 +98,8 @@ function ListService(props) {
       />
       <CardItem
         src={Luggage}
-        heading="Chọn hành lý"
-        description="Hãy chọn gói hành lý phù hợp"
+        heading="Select baggage"
+        description="Please select the appropriate baggage package"
         content={LuggageContent}
         actions={LuggageAction}
         showModal={showLuggageModal}
