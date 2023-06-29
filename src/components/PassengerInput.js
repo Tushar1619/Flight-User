@@ -82,7 +82,7 @@ const renderDatePicker = ({ input, label, meta }) => {
 function PassengerInput() {
   return (
     <Form>
-      <h4 class="ui dividing header">Thông tin hành khách</h4>
+      <h4 class="ui dividing header">PASSENGER INFORMATION ONLY</h4>
       <label>Họ và tên</label>
       <Form.Group widths="equal">
         <Field name="firstName" placeholder="Họ" component={renderTextField} />

@@ -41,23 +41,23 @@ function SelectFlight(props) {
         <div className="ui container grid" style={{ marginTop: 20 }}>
           <div className="eleven wide column">
             <Suspense fallback={ThreeDots}>
-              {props.flights.length === 0 ? <div>Không có chuyến bay nào.</div> :
+              {props.flights.length === 0 ? <div>Không có FLIGHT nào.</div> :
                 <>
-                  <h3 className="ui header customHeader">Chuyến bay đi: {departureDay}</h3>
+                  <h3 className="ui header customHeader">FLIGHT đi: {departureDay}</h3>
                   <ListFlight type="oneway" flights={props.flights} />
                   {
                     props.type === 'roundtrip' &&
                     <>
-                      <h3 className="ui header customHeader">Chuyến bay về: {returnDay}</h3>
+                      <h3 className="ui header customHeader">FLIGHT về: {returnDay}</h3>
                       <ListFlight type="roundtrip" flights={props.returnFlights} />
                     </>
                   }
                   <div className="div" style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '35px', marginBottom: '40px' }}>
                     <Link to="/" className="ui button">
-                      Quay lại
+                      Come back
                     </Link>
                     <Link to="/passengers" className="ui button primary">
-                      Tiếp tục
+                      Continue
                     </Link>
                   </div>
                 </>
@@ -79,16 +79,16 @@ function SelectFlight(props) {
     <div className="backgroundCustom">
       <div className="ui container wrapper">
         <div className="search__info">
-          {props.type === 'oneway' && <h3>CHUYẾN BAY MỘT CHIỀU | 1 Người lớn</h3>}
-          {props.type === 'roundtrip' && <h3>CHUYẾN BAY KHỨ HỒI | 1 Người lớn</h3>}
+          {props.type === 'oneway' && <h3>FLIGHT One-way |1 Adult</h3>}
+          {props.type === 'roundtrip' && <h3>FLIGHT Round-trip |1 Adult</h3>}
           <div className="desciption">
             <p style={{ marginRight: 20 }}>
               <i style={{ marginRight: 10 }} className="fas fa-map-marker-alt"></i>
-              Điểm Khởi hành: <span>{props.startFrom.name}</span>
+              Departure: <span>{props.startFrom.name}</span>
             </p>
             <p>
               <i style={{ marginRight: 10 }} className="fas fa-map-marker-alt"></i>
-              Điểm đến: <span>{props.destination.name}</span>
+              Destination: <span>{props.destination.name}</span>
             </p>
           </div>
         </div>

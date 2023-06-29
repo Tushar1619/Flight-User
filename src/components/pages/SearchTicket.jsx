@@ -38,7 +38,7 @@ function SearchTicket(props) {
         setBooking(data);
       })
       .catch(error => {
-        setBooking({ error: 'Không tìm thấy thông tin đặt chỗ!' })
+        setBooking({ error: 'Không tìm thấy Booking information!' })
       })
   }
 
@@ -47,7 +47,7 @@ function SearchTicket(props) {
       <div className="searchTicketContainer">
         <div className="searchTicketCard">
           <div className="formLeft">
-            <h2 className="searchTicketHeading">CHUYẾN BAY CỦA TÔI</h2>
+            <h2 className="searchTicketHeading">My flight</h2>
             <p>Bạn muốn xem chuyến bay đã đặt vui lòng điền thông tin bên dưới:
             </p>
             <form onSubmit={props.handleSubmit(onSubmit)} style={{ marginTop: '30px', textAlign: 'center' }}>
@@ -71,7 +71,7 @@ function SearchTicket(props) {
                     <div className="event">
                       <div className="content">
                         <div className="summary">
-                          <span>Loại vé: {booking.tickets.length === 2 ? 'Khứ hồi' : 'Một chiều'}</span>
+                          <span>Ticket Type: {booking.tickets.length === 2 ? 'Round-trip' : 'One-way'}</span>
                         </div>
                       </div>
                     </div>
@@ -86,7 +86,7 @@ function SearchTicket(props) {
                     <div className="event">
                       <div className="content">
                         <div className="summary">
-                          Chuyến đi:
+                          Trip:
                           {booking.tickets[0].flightId.startFrom.name}
                           <i style={{ marginLeft: 20, marginRight: 20 }} className="fas fa-plane"></i>
                           {booking.tickets[0].flightId.destination.name}
@@ -94,15 +94,15 @@ function SearchTicket(props) {
                             Khoang: {booking.tickets[0].type};   Ghế: {booking.tickets[0].seat}
                           </div>
                           <div>
-                            <span>Khởi hành lúc: {booking.tickets[0].flightId.takeOffTime}</span>
-                            <div> Hạ cánh lúc: {booking.tickets[0].flightId.landingTime}</div>
+                            <span>Departure at: {booking.tickets[0].flightId.takeOffTime}</span>
+                            <div> Landing at: {booking.tickets[0].flightId.landingTime}</div>
 
                             <hr />
                             {booking.tickets[1] &&
                               <div className="event">
                                 <div className="content">
                                   <div className="summary">
-                                    Chuyến về:
+                                    Return trip:
                                     {booking.tickets[1].flightId.startFrom.name}
                                     <i style={{ marginLeft: 20, marginRight: 20 }} className="fas fa-plane"></i>
                                     {booking.tickets[1].flightId.destination.name}
@@ -110,8 +110,8 @@ function SearchTicket(props) {
                                       Khoang: {booking.tickets[1].type};   Ghế: {booking.tickets[1].seat}
                                     </div>
                                     <div>
-                                      <span>Khởi hành lúc: {booking.tickets[1].flightId.takeOffTime}</span>
-                                      <div> Hạ cánh lúc: {booking.tickets[1].flightId.landingTime}</div>
+                                      <span>Departure at: {booking.tickets[1].flightId.takeOffTime}</span>
+                                      <div> Landing at: {booking.tickets[1].flightId.landingTime}</div>
                                     </div>
                                   </div>
                                 </div>
@@ -119,7 +119,7 @@ function SearchTicket(props) {
                               </div>
                             }
                             <div className="ui content">
-                              Giá vé: <span className="ui header red">{booking.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+                              Fare: <span className="ui header red">{booking.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
                             </div>
                           </div>
                         </div>

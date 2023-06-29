@@ -38,8 +38,8 @@ function BookingSuccess(props) {
                     <p>Khoang: {props.flight.type}  Ghế: {props.selectedSeat[0].id}</p>
                   }
                   <div>
-                    <span>Khởi hành lúc: {flight.takeOffTime}</span>
-                    <div> Hạ cánh lúc: {flight.landingTime}</div>
+                    <span>Departure at: {flight.takeOffTime}</span>
+                    <div> Landing at: {flight.landingTime}</div>
                     <hr />
                     {returnFlight &&
                       <div className="event">
@@ -52,8 +52,8 @@ function BookingSuccess(props) {
                               <p>Khoang: {props.returnFlight.type}  Ghế: {props.selectedReturnSeat[0].id}</p>
                             }
                             <div>
-                              <span>Khởi hành lúc: {returnFlight.takeOffTime}</span>
-                              <div> Hạ cánh lúc: {returnFlight.landingTime}</div>
+                              <span>Departure at: {returnFlight.takeOffTime}</span>
+                              <div> Landing at: {returnFlight.landingTime}</div>
                             </div>
                           </div>
                         </div>
@@ -61,7 +61,7 @@ function BookingSuccess(props) {
                       </div>
                     }
                     <div className="ui content">
-                      Tổng giá vé: <span className="ui header red">{ticket.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
+                      Tổng Fare: <span className="ui header red">{ticket.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</span>
                     </div>
                   </div>
                 </div>

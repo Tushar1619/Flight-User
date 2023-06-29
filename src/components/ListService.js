@@ -41,7 +41,7 @@ function ListService(props) {
 
   const SeatsMapcontent = (
     <>
-      <h3>Chuyến đi</h3>
+      <h3>Trip</h3>
       <Plane
         return={false}
         airliner={props.airliner}
@@ -50,7 +50,7 @@ function ListService(props) {
       
       {props.returnFlight && 
         <>
-          <h3>Chuyến về</h3>
+          <h3>Return trip</h3>
           <Plane
             return={true}
             airliner={props.returnFlight.airliner}
